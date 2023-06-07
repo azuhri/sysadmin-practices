@@ -24,25 +24,18 @@ Setelah melakukan konfigurasi simpan perubahan, lalu restart konfigurasi postfix
 
 ![dpkg](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/45w2hvw0vou72dlhbjof.png)
 
-4. Lalu restart service postfix dan courier-imapnya
-![restart_postfix](https://prnt.sc/_4Eas2MAW-dZ)
+4. Buat user dan buat directory maildir untuk semua user sebagai tempat mailbox email
+![restart_postfix](https://img001.prntscr.com/file/img001/u5Pd6W-pTjG-jRD9tdRq-A.jpeg)
+Pada command maildirmake, adalah untuk membuat directory maildir pada home directory masing-masing user, lalu membuat baru dengan nama user1 dan user2. Terlihat bahwa secara otomatis ketika ada user baru, terdapat directory maildir di home directory setiap user
 
-4. Kemudian tambah CNAME untuk email pada file db-forward
+5. Lalu restart service postfix dan courier-imapnya
+![restart_postfix](https://img001.prntscr.com/file/img001/G5yNlQSXQ6G0CYeo6LDmgg.jpeg)
+
+6. Kemudian tambah CNAME untuk email pada file db-forward
 
 ![tambah CNAME](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/le5012f6s5rgzv6j9joj.png)
 
-
 ## Membuat Contoh Mail
-
-Semua package telah terinstall selanjutnya konfigurasi pada apache2 nya.
-
-Kami mencoba membuat webmail nya, kami menggunakan webmail opensource dari netflix
-
-![wget webmail](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r6q05of0m42gfekfj64q.png)
-
-Kemudian tambahkan juga konfigurasi apache 2 di site-availables, 
-
-
-![konfigutasi apache](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fd55u40bfiibavnymn45.png)
-
-Terakhir **restart** service apache2 agar bisa menggunakan Web Mail. 
+7. Testing kirim email ke user2
+![restart_postfix](https://img001.prntscr.com/file/img001/lUjkc23dQMaerAhdXqPHpw.jpeg)
+Kali ini akan ada percobaan mengirim email ke user via telnet
