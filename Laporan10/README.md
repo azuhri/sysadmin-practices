@@ -24,6 +24,9 @@ Setelah melakukan konfigurasi simpan perubahan, lalu restart konfigurasi postfix
 
 ![dpkg](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/45w2hvw0vou72dlhbjof.png)
 
+4. Lalu restart service postfix dan courier-imapnya
+![restart_postfix](https://prnt.sc/_4Eas2MAW-dZ)
+
 4. Kemudian tambah CNAME untuk email pada file db-forward
 
 ![tambah CNAME](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/le5012f6s5rgzv6j9joj.png)
