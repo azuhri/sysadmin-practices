@@ -41,4 +41,4 @@ Pada command maildirmake, adalah untuk membuat directory maildir pada home direc
 7. Testing kirim email ke user2
 
 ![restart_postfix](https://img001.prntscr.com/file/img001/lUjkc23dQMaerAhdXqPHpw.jpeg)
-Kali ini akan ada percobaan mengirim email ke user via telnet
+Kali ini akan ada percobaan mengirim email ke user2 via telnet
