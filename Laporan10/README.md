@@ -24,21 +24,35 @@ Setelah melakukan konfigurasi simpan perubahan, lalu restart konfigurasi postfix
 
 ![dpkg](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/45w2hvw0vou72dlhbjof.png)
 
-4. Buat user dan buat directory maildir untuk semua user sebagai tempat mailbox email
-![restart_postfix](https://img001.prntscr.com/file/img001/u5Pd6W-pTjG-jRD9tdRq-A.jpeg)
-
-Pada command maildirmake, adalah untuk membuat directory maildir pada home directory masing-masing user, lalu membuat baru dengan nama user1 dan user2. Terlihat bahwa secara otomatis ketika ada user baru, terdapat directory maildir di home directory setiap user
-
-5. Lalu restart service postfix dan courier-imapnya
-
-![restart_postfix](https://img001.prntscr.com/file/img001/G5yNlQSXQ6G0CYeo6LDmgg.jpeg)
-
-6. Kemudian tambah CNAME untuk email pada file db-forward
+4. Kemudian tambah CNAME untuk email pada file db-forward
 
 ![tambah CNAME](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/le5012f6s5rgzv6j9joj.png)
 
-## Membuat Contoh Mail
-7. Testing kirim email ke user2
 
-![restart_postfix](https://img001.prntscr.com/file/img001/lUjkc23dQMaerAhdXqPHpw.jpeg)
-Kali ini akan ada percobaan mengirim email ke user2 via telnet
+## Membuat Contoh Mail
+
+Semua package telah terinstall selanjutnya konfigurasi pada apache2 nya.
+
+Kami mencoba membuat webmail nya, kami menggunakan webmail opensource dari netflix
+
+![wget webmail](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r6q05of0m42gfekfj64q.png)
+
+Kemudian tambahkan juga konfigurasi apache 2 di site-availables, 
+
+
+![konfigutasi apache](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fd55u40bfiibavnymn45.png)
+
+Terakhir **restart** service apache2 agar bisa menggunakan Web Mail. 
+
+## Kirim email antar user
+Berikut contoh mengirim email kedalam user sendiri
+![image](https://github.com/farhanroy/workshop-administrasi-jaringan/assets/31172356/861b28f4-796c-4bca-8fa6-b47f79ef0ad8)
+
+## Kirim email antar domain
+Berikut contoh mengirim email kedalam user di lain domain
+
+#### Mengirim ke email kelompok 5
+![image](https://github.com/farhanroy/workshop-administrasi-jaringan/assets/31172356/cc0c5273-cb85-453a-817f-a409a5530241)
+
+#### Kelompok 5 menerima email
+![image](https://github.com/farhanroy/workshop-administrasi-jaringan/assets/31172356/c5e24bd0-c181-449b-914b-44e311278a5e)
